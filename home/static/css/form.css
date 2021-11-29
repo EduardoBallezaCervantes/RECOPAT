@@ -1,0 +1,80 @@
+.estructura{ 
+    background-color: rgba(242, 161, 199,0.5);
+    color:rgb(196, 4, 170);
+    width: 400px;
+    height: 500px;
+    top:500px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 70px 40px;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius:50%;
+    position: absolute;
+    top: -10%;
+    left: 35%;
+}
+.estructura label{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.estructura input{
+    color: black;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 7px;
+}
+.titulo{
+    text-align: center;
+    font-family: 'Century Gothic';
+    font-weight: bold;
+}
+.boton {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: rgb(17, 17, 17);
+    background-color: #F2A0C6;
+    border-radius: 45px 15px;
+    box-shadow: 0 10px #f15fa3;
+}
+  
+.boton:hover {background-color: #F2A0C6}
+
+.boton:active {
+    background-color: #911491;
+    box-shadow: 0 5px rgb(133, 3, 122);
+    transform: translateY(4px);
+} 
+
+
+.pie{
+    margin-top: 1500px;
+    background: black;
+    position: center;
+    color:aliceblue;
+    width: 500px;
+    height: 400px;
+}
+
+.pie p{
+    margin-top: +30px;
+    margin-left: 60px;
+}
+
+.pie h1{
+    margin-top: -35px;
+    margin-left: 850px;
+}

@@ -1,0 +1,35 @@
+{% extends 'home/home.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <div class="estructura">
+        <img class="avatar" src="{% static 'img/logo.png' %}" alt="avatar potro">
+        <h1 class="titulo">Detección del cancer de mama</h1>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div>
+                <label for="name">Nombre </label>
+                <input type="text" name="name" placeholder="Ingresa tu nombre">
+            </div>
+            <div>
+                <label for="temperatura">Temperatura</label>
+                <input type="number" name="temperature" placeholder="Ingresa la cantidad de tejido">
+            <div>
+            <div>
+                <label for="color">Color</label>
+                <input type="number" name="color" placeholder="Ingresa el color en decimal">
+            <div>    
+            <div>
+                <label for="inflammation">Inflamacion</label>
+                <input type="number" name="inflammation" placeholder="Ingresa la cantidad de inflamacion">
+            <div>
+            <input type="submit" value="Registar" class="boton">
+        </form>
+    </div>
+    </body>
+{% endblock %}

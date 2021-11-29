@@ -1,0 +1,41 @@
+
+{% extends 'home/home.html' %}
+{% load static %}
+{% block content %}
+    <head>
+        <title>Crear Grafo</title>
+        <link rel="stylesheet" href="{% static 'css/grafo.css' %}">
+    </head>
+    <body>
+        <div>
+            <form method="GET">
+                <div>
+                    <label for="umbral">Umbral</label>
+                    <input type="number" name="umbral" placeholder="Ingresa el umbral">
+                </div>
+                <button type="submit" class="boton"> Calcular </button>
+            </form>
+        </div>
+        <div class="tabla"> 
+            <p>Elementos que cumplen el humbral</p>
+            <table class="estrucutura"> 
+                <thead>
+                    <tr>
+                        <td>Temperatura</td>
+                        <td>Color</td>
+                        <td>Inflamacion</td>
+                    </tr>
+                </thead>  
+                <tbody>
+                    {%for elemento in lista %}
+                        <tr style="border:2px solid black;">
+                            <td style='border:2px solid black;'>{{ elemento.temperature}}</td>
+                            <td style='border:2px solid black;'>{{ elemento.color }}</td>
+                            <td style='border:2px solid black;'>{{ elemento.inflammation }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <title>Reconocimiento de patrones</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="page-header">
+                <img class="logo" src="{% static 'img/logo.png' %}" >
+                <h1><a href="/">cancer de mama</a></h1>
+            </div>
+            <hr>
+            <div class="navegar">
+                <ul class="menu">
+                    <li><a href="{% url 'registrar' %}">llenar Registro</a></li>
+                </ul>
+                <ul class="menu">
+                    <li><a href="{% url 'grafo' %}">Visualizar Grafo</a></li>
+                </ul>
+            </div>
+            <hr>
+        </header>
+        
+        <p class="mensaje">
+            En esta pagina se llevara a cabo un estudios sobre el cnacer de mama con el uso del reconocimiento de patrones sintactico estructural.
+            ¡por favor llene el formulario!
+        </p>
+        
+        <div>
+            {% block content %}
+                <img class="img" src="{% static 'img/back.jpg' %}" >
+            {% endblock %}
+        </div>
+        <hr>
+        <div>
+            <div class="pie">
+                <p>Estos datos son analizados para detectar patrones en las caracteristicas de cada paciente para un estudio</p>
+                <img class="logo" src="{% static 'img/mano.png' %}" >
+                <h1>Datos</h1>
+                <h1>Profesor: Efren Gonzalez Gomez</h2>
+                <h1>Alumno: Eduardo Balleza Cervantes</h2>
+                <h1>Materia: Reconocimiento de patrones sintactico</h3>
+            </div>
+        </div>
+    </body>
+</html>
